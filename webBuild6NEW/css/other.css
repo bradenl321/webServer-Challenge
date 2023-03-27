@@ -1,0 +1,289 @@
+@font-face {
+    font-family: shareTech;
+    src: url(../fonts/ShareTech-Regular.ttf);
+}
+
+body {
+    font-family: arial,helvetica,sans-serif;
+    color:#ffffff;
+    background-color:#222222;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#grid {
+    padding-top: 10px;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header"
+        "aside"    
+        "main";
+    
+}
+
+
+.strong {
+    font-weight: bold;
+}
+
+.title {
+    font-size: 1.3rem;
+    color: gold;
+    
+}
+
+header {
+    grid-area: "header";
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    width: 1250px;
+    margin-bottom: 20px;
+}
+
+.heading {
+    font-size: 3rem;
+    font-family: shareTech;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.subHeading {
+    display: block;
+    font-size: 1.8rem;
+    font-family: shareTech;
+    /* margin-bottom: 10px; */
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.line {
+    height: 3px;
+    width: 1250px;
+    background-color: gold;
+    /* display: flex; */
+    /* align-self: center;
+    justify-self: center; */
+    margin-bottom: 20px;
+}
+
+aside {
+    grid-area: "aside";
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    max-width: 1200px;
+
+}
+
+#codeLaptop {
+    margin-right: 5px;
+}
+
+#homeimagey {
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center; 
+
+}
+
+#homeImage {
+    padding: 5px;
+    border-radius: 500px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ffffff;
+}
+
+.homeImage {
+    width: 200px;
+    /* margin-top: 20px; */
+    /* display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;  */
+    
+}
+
+
+
+
+
+
+
+
+main {
+    grid-area: "main";
+    display: grid;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    max-width: 1200px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "text       num";
+}
+
+#otherSample1 {
+    grid-area: "text";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10%;
+    /* margin-left: 7%; */
+
+}
+#otherSample2 {
+    grid-area: "num";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-right: 10%; */
+    margin-left: 10%;
+
+}
+
+.otherSampleImg {
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+@media screen and (max-width:1250px) {
+    
+    header {
+        width: 850px;
+    }
+    .line {
+        width: 850px;
+    }
+
+    aside {
+        width: 800px;
+    }
+
+    main {
+        max-width: 800px;
+    }
+
+
+}   
+
+@media screen and (max-width:850px) {
+    
+    header {
+        width: 550px;
+    }
+    .line {
+        width: 550px;
+    }
+
+    aside {
+        width: 500px;
+    }
+
+    main {
+        
+        max-width: 500px;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "text"
+        "num";
+    }
+    #otherSample1 {
+        grid-area: "text";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 10%;
+        margin-left: 10%;
+    
+    }
+    #otherSample2 {
+        grid-area: "num";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 10%;
+        margin-left: 10%;
+        margin-top: 50px;
+}   
+}
+
+@media screen and (max-width:550px) {
+    
+    header {
+        max-width: 350px;
+    }
+   
+    nav {
+        max-width: 300px;
+    }
+    .line {
+        max-width: 350px;
+    }
+
+    aside {
+        max-width: 300px;
+    }
+
+    main {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+    }
+}   
+
+@media screen and (max-width:450px) {
+    
+    header {
+        max-width: 200px;
+    }
+   .heading {
+    font-size: 2rem;
+   }
+ 
+    .line {
+        max-width: 200px;
+    }
+
+    aside {
+        max-width: 200px;
+    }
+
+    main {
+        max-width: 200px;
+        font-size: .8rem;
+    }
+
+    .otherSampleImg {
+        width: 300px;
+        
+    }
+}   
